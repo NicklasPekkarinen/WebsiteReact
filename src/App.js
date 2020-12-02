@@ -1,24 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import Tunes from './Tunes';
+import { useState } from 'react'
 
 function App() {
+
+  const [checked, setChecked] = useState(false)
+  const handleChange = () => setChecked(!checked)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <div id="menu-wrap">
+        <input type="checkbox" className="toggler" checked={checked} onChange={handleChange} />
+        <div className="hamburger">
+          <div></div>
+        </div>
+        <div className="menu">
+          <div>
+            <div>
+              <ul>
+                <li>
+                  <Link to='/' onClick={handleChange}>Start</Link>
+                </li>
+                <li>
+                  <Link to="/tunes" onClick={handleChange}>What I'm listening to</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Switch>
+        <Route exact path="/"><Home /></Route>
+        <Route path="/tunes"><Tunes /></Route>
+      </Switch>
+    </Router >
   );
 }
 

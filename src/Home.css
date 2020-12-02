@@ -1,0 +1,70 @@
+.home {
+    background-color: black;
+    color: white;
+}
+#header {
+    height: 300px;
+    width: 100vw;
+    position: relative;
+  }
+  #title {
+    position: absolute;
+    bottom: 16px;
+    right: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  #about {
+    max-width: 960px;
+    padding: 100px;
+  }
+  #about p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  #interests {
+    background-color: rgb(46, 50, 53);
+    padding: 100px;
+  }
+  #interests h1 {
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  #portfolio {
+    padding: 100px;
+  }
+  #portfolio a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #61DBFB;
+  }
+  h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-bottom: 16px;
+  }
+  
+  /* Media Queries */
+  
+  @media (min-width: 645px) {
+    #header {
+      height: 400px;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    #header {
+      height: 600px;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    #header {
+      height: 700px;
+    }
+  }
